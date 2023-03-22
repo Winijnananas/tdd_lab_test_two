@@ -8,10 +8,10 @@ client = TestClient(app)
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"Hello": "WorldTestCI"}
+    assert response.json() == {"Hello": "WorldTestGET"}
 
 
 def test_read_main_two():
     response = client.post("/")
     assert response.status_code == 200
-    assert response.json() == {"Hello": "WorldTestCItwo"}
+    assert response.json() == {"Hello": "WorldTestPOST"}
