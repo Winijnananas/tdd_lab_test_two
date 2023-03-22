@@ -49,10 +49,10 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 cp function.zip s3://winijnan/function.zip
+          command: aws s3 cp function.zip s3://chakriya/function.zip
       - run:
           name: Deploy new Lambda
-          command: aws lambda update-function-code --function-name winijnan --s3-bucket winijnan --s3-key function.zip
+          command: aws lambda update-function-code --function-name winijnan --s3-bucket chakriya --s3-key function.zip
 
 workflows:
   build-test-and-deploy:
