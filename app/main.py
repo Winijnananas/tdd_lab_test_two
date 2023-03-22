@@ -5,11 +5,11 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "WorldTestCI"}
+    return {"Hello": "WorldTestGET"}
 
 @app.post("/")
 def read_root():
-    return {"Hello": "WorldTestCItwo"}
+    return {"Hello": "WorldTestPOST"}
 
 
 @app.get("/items/{item_id}")
